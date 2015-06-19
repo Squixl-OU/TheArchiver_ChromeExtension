@@ -2,11 +2,11 @@
 // uses Archive.org's Wayback Machine, Archive.is and Webcite
 // Cathal McNally
 // 19.06.2015
-// ver 1.01
+// ver 1.1
 
 // changelog
 // ver 1.0 Initial version
-// ver 1.01 fixed a url error for settings page
+// ver 1.1 fixed a url error for settings page
 
 (function(){
 	// Get settings saved in local storage

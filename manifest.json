@@ -1,7 +1,7 @@
 {
   "name": "The Archiver",
-  "description": "Right Click on a Page for The Archiver's Menu",
-  "version": "1.0",
+  "description": "Save Pages to Wayback Machine, Archive.is & WebCite",
+  "version": "1.1",
   "permissions": ["contextMenus","storage"],
   "background": {
     "scripts": ["theArchiver.js"]
