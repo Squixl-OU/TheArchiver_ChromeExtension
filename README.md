@@ -25,3 +25,9 @@ To install the Chrome extension:
 1. Right click on a page
 2. Use the Archivers menu to Save or Check a page.
 3. Save all the Internets!
+
+### Screenshots
+
+![Chrome context menu](http://s5.postimg.org/mha1vnjt3/archiver_chrome.png)
+
+![Chrome options](http://s5.postimg.org/mijzp2lmv/archiver_chrome_options.png)
