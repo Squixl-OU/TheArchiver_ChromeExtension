@@ -12,7 +12,7 @@ Save all the Internets!
 
 ### Installation
 
-Download the CRX [here](https://mega.nz/#!qZwQyJSR!QFuvXoa7n52MnIKEUzcABl8Ry0b5g0sPm-Drf3T8Ef4)
+Download the CRX [here](https://mega.nz/#!DVpTnCDD!73d4I1m68-fbFIs2NrJX6mm7iuV1aC3UG-DCRk2CTbE)
 
 To install the Chrome extension:
 
