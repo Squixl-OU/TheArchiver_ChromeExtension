@@ -39,48 +39,64 @@
 	
 	// Depending on the options you have set send the currently opened page to an Archival Service
 	function saveIt(info){
+		var linkClicked = "";
+		if (info.linkUrl){
+			linkClicked = info.linkUrl;
+		} else if (info.mediaType === "image"){
+			linkClicked = info.srcUrl;
+		} else{
+			linkClicked = info.pageUrl;
+		} 
 		// Save with the Wayback Machine
 		if(archive_org == "true"){
 			chrome.tabs.create({ 
-				url: "http://web.archive.org/save/" + info.pageUrl,
+				url: "http://web.archive.org/save/" + linkClicked,
 			});
 		}
 		
 		// Save with Archive.is
 		if(archive_is == "true"){
 			chrome.tabs.create({ 
-				url: "https://archive.is/?run=1&url=" + info.pageUrl,
+				url: "https://archive.is/?run=1&url=" + linkClicked,
 			});
 		}
 		
 		// Save with WebCite
 		if(webcite == "true"){
 			chrome.tabs.create({ 
-				url: "http://www.webcitation.org/archive?url=" + info.pageUrl + "&email=" + email,
+				url: "http://www.webcitation.org/archive?url=" + linkClicked + "&email=" + email,
 			});
 		}
 	}
 
 	// Check if any of the Archival services have saved the page already
 	function checkIt(info){
+		var linkClicked = "";
+		if (info.linkUrl){
+			linkClicked = info.linkUrl;
+		} else if (info.mediaType === "image"){
+			linkClicked = info.srcUrl;
+		}else{
+			linkClicked = info.pageUrl;
+		}
 		// Check the Wayback Machine
 		if(archive_org == "true"){
-			chrome.tabs.create({ 
-				url: "http://web.archive.org/web/" + info.pageUrl,
+			chrome.tabs.create({
+				url: "http://web.archive.org/web/" + linkClicked,
 			});
 		}
 		
 		// Check Archive.is
 		if(archive_is == "true"){
-			chrome.tabs.create({ 
-				url: "http://archive.is/" + info.pageUrl,
+			chrome.tabs.create({
+				url: "http://archive.is/" + linkClicked,			
 			});
 		}
 		
 		// Check WebCite
 		if(webcite == "true"){
-			chrome.tabs.create({ 
-				url: "http://www.webcitation.org/query?url=" + info.pageUrl,
+			chrome.tabs.create({
+				url: "http://www.webcitation.org/query?url=" + linkClicked,
 			});
 		}
 	}
@@ -95,19 +111,19 @@
 	// Create context menus
 	chrome.contextMenus.create({
 	  "title": "Save It",
-	  "contexts": ["page"],
+	  "contexts": ["page", "link", "image"],
 	  "onclick": saveIt}
 	);
 
 	chrome.contextMenus.create({
 	  "title": "Check It",
-	  "contexts": ["page"],
+	  "contexts": ["page", "link", "image"],
 	  "onclick": checkIt}
 	);
 
 	chrome.contextMenus.create({
 	  "title": "Settings",
-	  "contexts": ["page"],
+	  "contexts": ["page", "link", "image"],
 	  "onclick": goToSettings}
 	);
 }());
