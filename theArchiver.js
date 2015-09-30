@@ -51,6 +51,7 @@
 		if(archive_org == "true"){
 			chrome.tabs.create({ 
 				url: "http://web.archive.org/save/" + linkClicked,
+				active: false,
 			});
 		}
 		
@@ -58,6 +59,7 @@
 		if(archive_is == "true"){
 			chrome.tabs.create({ 
 				url: "https://archive.is/?run=1&url=" + linkClicked,
+				active: false,
 			});
 		}
 		
@@ -65,6 +67,7 @@
 		if(webcite == "true"){
 			chrome.tabs.create({ 
 				url: "http://www.webcitation.org/archive?url=" + linkClicked + "&email=" + email,
+				active: false,
 			});
 		}
 	}
@@ -83,13 +86,15 @@
 		if(archive_org == "true"){
 			chrome.tabs.create({
 				url: "http://web.archive.org/web/" + linkClicked,
+				active: false,
 			});
 		}
 		
 		// Check Archive.is
 		if(archive_is == "true"){
 			chrome.tabs.create({
-				url: "http://archive.is/" + linkClicked,			
+				url: "http://archive.is/" + linkClicked,
+				active: false,
 			});
 		}
 		
@@ -97,6 +102,7 @@
 		if(webcite == "true"){
 			chrome.tabs.create({
 				url: "http://www.webcitation.org/query?url=" + linkClicked,
+				active: false,
 			});
 		}
 	}

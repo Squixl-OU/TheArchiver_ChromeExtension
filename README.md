@@ -12,7 +12,7 @@ Save all the Internets!
 
 ### Installation
 
-Download the CRX [here](https://mega.nz/#!DVpTnCDD!73d4I1m68-fbFIs2NrJX6mm7iuV1aC3UG-DCRk2CTbE)
+Download the CRX [here](https://mega.nz/#F!bEAkmKwK!4hd2C6Ta4wmiVu1hx0t4gw)
 
 To install the Chrome extension:
 
@@ -22,7 +22,7 @@ To install the Chrome extension:
 
 ### Usage
 
-1. Right click on a page
+1. Right click on a Page, Link or Image
 2. Use the Archivers menu to Save or Check a page.
 3. Save all the Internets!
 
